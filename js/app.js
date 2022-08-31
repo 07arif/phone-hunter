@@ -9,10 +9,13 @@ const displayPhones = phones => {
     const phonesContainer = document.getElementById('phone-container');
     phonesContainer.textContent = '';
     //display 100 phones only
+    const showAll = document.getElementById('show-all');
     if (phones.length > 10) {
         phones = phones.slice(0, 10);
-        const showAll = document.getElementById('show-all');
         showAll.classList.remove('d-none')
+    }
+    else {
+        showAll.classList.add('d-none');
     }
 
 
